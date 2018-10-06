@@ -10,7 +10,7 @@ $(function() {
     } else {
         url = "/swagger.json";
     }
-    url = 'http://localhost:5000/docs';
+    //url = 'http://localhost:5000/docs';
 
     // Pre load translate...
     if (window.SwaggerTranslator) {
@@ -21,18 +21,8 @@ $(function() {
     var validatorUrl = null;
     validatorUrl: "//online.swagger.io/validator";
 
-    var ACCESS_TOKEN_QUERY_PARAM_NAME = "access_token";
-    var accessToken = getUrlVars()[ACCESS_TOKEN_QUERY_PARAM_NAME];
-
     window.swaggerUi = new SwaggerUi({
-        url:
-            url +
-            (accessToken
-                ? (url.indexOf("?") < 0 ? "?" : "&") +
-                  ACCESS_TOKEN_QUERY_PARAM_NAME +
-                  "=" +
-                  accessToken
-                : ""),
+        url: window.location.protocol + '//' + window.location.host + '/docs'
         dom_id: "swagger-ui-container",
         supportedSubmitMethods: ["get", "post", "put", "delete", "patch"],
         onComplete: function(swaggerApi, swaggerUi) {
@@ -62,7 +52,7 @@ $(function() {
                 auth = swaggerApi.auths[0].value;
                 $("#input_apiKey").show();
             }
-            addApiKeyAuthorization();
+            //addApiKeyAuthorization();
 
             // load complete custom js
         },
@@ -122,6 +112,7 @@ $(function() {
 
     */
 
+    log(window.swaggerUi);
     window.swaggerUi.load();
 
     function log() {

@@ -5,6 +5,8 @@ $(function() {
     $("#input_apiKey").hide();
 
     var url = window.location.search.match(/url=([^&]+)/);
+    log("karan");
+    log(url);
     if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
     } else {
@@ -130,3 +132,4 @@ $(function() {
         }
     }
 });
+

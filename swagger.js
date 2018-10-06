@@ -8,7 +8,7 @@ $(function() {
     if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
     } else {
-        url = "/swagger.json";
+        url = "/docs/swagger.json";
     }
     //url = 'http://localhost:5000/docs';
 

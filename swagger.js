@@ -112,7 +112,7 @@ $(function() {
 
     */
 
-    log(window.swaggerUi);
+    // log(window.swaggerUi);
     window.swaggerUi.load();
 
     function log() {

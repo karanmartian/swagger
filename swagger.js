@@ -26,7 +26,7 @@ $(function() {
 
     window.swaggerUi = new SwaggerUi({
         url:
-            url +
+            '/docs' +
             (accessToken
                 ? (url.indexOf("?") < 0 ? "?" : "&") +
                   ACCESS_TOKEN_QUERY_PARAM_NAME +

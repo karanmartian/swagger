@@ -22,7 +22,7 @@ $(function() {
     validatorUrl: "//online.swagger.io/validator";
 
     window.swaggerUi = new SwaggerUi({
-        url: window.location.protocol + '//' + window.location.host + '/docs'
+        url: window.location.protocol + '//' + window.location.host + '/docs',
         dom_id: "swagger-ui-container",
         supportedSubmitMethods: ["get", "post", "put", "delete", "patch"],
         onComplete: function(swaggerApi, swaggerUi) {
